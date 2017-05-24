@@ -4649,6 +4649,7 @@ process = process >> 1;
 
 }
 }
+else PORTAbits.RA4 = 0;
 }
 
 number++;

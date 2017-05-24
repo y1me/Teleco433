@@ -173,6 +173,7 @@ void main(void)
                             
                     }
                 }
+                else OUT = 0;
             }
             
             number++;

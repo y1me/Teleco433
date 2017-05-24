@@ -3721,33 +3721,38 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 452 ]
 "175
 }
-[e :U 449 ]
-"176
-}
-[e :U 448 ]
 [; ;main.c: 174: }
 [; ;main.c: 175: }
-[; ;main.c: 176: }
-[; ;main.c: 178: number++;
-"178
-[e ++ _number -> -> 1 `i `ui ]
-[; ;main.c: 179: if (number > 1000) number = 0;
-"179
-[e $ ! > _number -> -> 1000 `i `ui 455  ]
-[e = _number -> -> 0 `i `ui ]
+[e $U 455  ]
+"176
+[e :U 449 ]
+[; ;main.c: 176: else PORTAbits.RA4 = 0;
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
 [e :U 455 ]
+"177
+}
+[e :U 448 ]
+[; ;main.c: 177: }
+[; ;main.c: 179: number++;
+"179
+[e ++ _number -> -> 1 `i `ui ]
+[; ;main.c: 180: if (number > 1000) number = 0;
 "180
+[e $ ! > _number -> -> 1000 `i `ui 456  ]
+[e = _number -> -> 0 `i `ui ]
+[e :U 456 ]
+"181
 }
 [e :U 446 ]
-"182
+"183
 }
 [e :U 443 ]
 "151
 [e $U 444  ]
 [e :U 445 ]
-[; ;main.c: 180: }
-[; ;main.c: 182: }
+[; ;main.c: 181: }
 [; ;main.c: 183: }
-"183
+[; ;main.c: 184: }
+"184
 [e :UE 442 ]
 }
