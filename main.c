@@ -37,6 +37,7 @@ volatile unsigned char timer0ReloadVal;
 
 unsigned int number = 0, process;
 const unsigned int code = 0b0000100000011001;
+int test;
     
 
 
@@ -45,19 +46,25 @@ void TMR0_Initialize(void)
     // Set TMR0 to the options selected in the User Interface
 
     // PSA assigned; PS 1:4; TMRSE Increment_hi_lo; mask the nWPUEN and INTEDG bits
-    OPTION_REG = (OPTION_REG & 0xC0) | 0xD1 & 0x3F; 
+    OPTION_REGbits.nWPUEN = 1;
+    OPTION_REGbits.INTEDG = 1;
+    OPTION_REGbits.TMR0CS = 0;
+    OPTION_REGbits.TMR0SE = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS = 0;
 
     // TMR0 251; 
-    TMR0 = 0xFB;
+    TMR0 = 247;
 
     // Load the TMR value to reload variable
-    timer0ReloadVal= 251;
+    timer0ReloadVal= 108;
 
     // Clear Interrupt flag before enabling the interrupt
     INTCONbits.TMR0IF = 0;
 
     // Enabling TMR0 interrupt
     INTCONbits.TMR0IE = 1;
+    INTCONbits.TMR0IE == 1;
 
 }
 
@@ -65,6 +72,7 @@ void OSCILLATOR_Initialize(void)
 {
     // SCS FOSC; SPLLEN disabled; IRCF 250KHz_MF; 
     OSCCON = 0x30;
+    OSCCONbits.IRCF = 0xD;
     // TUN 0; 
     OSCTUNE = 0x00;
     // Set the secondary oscillator
@@ -120,11 +128,11 @@ void interrupt INTERRUPT_InterruptManager (void)
     // interrupt handler
     if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
     {
-            INTCONbits.TMR0IF = 0;
-            flag.Tim320u = 1;
-            PORTAbits.RA2 = ~PORTAbits.RA2;
+        INTCONbits.TMR0IF = 0;
+        flag.Tim320u = 1;
+        PORTAbits.RA2 = ~PORTAbits.RA2;
 
-    TMR0 = timer0ReloadVal;
+        TMR0 = timer0ReloadVal;
     }
     else
     {
@@ -152,32 +160,57 @@ void main(void)
     {
         if (flag.Tim320u)
         {
+            
             if (number == 0)
             {
                 OUT = 1;
                 process = code;
+                test = 0;
             }
             else
             {
                 if (number <= CODELENGTH)
                 {
-                    if ((number % 3) == 1)  OUT = 0;
+                    
+                    //OUT = ~OUT;
+                    if (test == 0) OUT = 0;
+                    if (test == 1)
+                    {
+                        if (process & 1) OUT = 1;
+                        else OUT = 0;
+                        process = process >> 1;       
+                    }
+                    if (test == 2) OUT = 1;
+                    test++;
+                    if (test == 3)  test = 0;
+                    
 
-                    if ((number % 3) == 0)  OUT = 1;
+                    /*
+                    
+
+                    
 
                     if ((number % 3) == 2)
                     {
                         if (process & 1) OUT = 1;
                         else OUT = 0;
-                        process = process >> 1;
-                            
+                        process = process >> 1;       
                     }
+ * */
                 }
                 else OUT = 0;
             }
             
+            flag.Tim320u = 0;
+            
             number++;
-            if (number > REPEAT)    number = 0;
+            
+            if (number > REPEAT)    
+            {
+                number = 0;
+            }
+            
+               
         }
 
     }

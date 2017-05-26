@@ -4523,6 +4523,7 @@ volatile unsigned char timer0ReloadVal;
 
 unsigned int number = 0, process;
 const unsigned int code = 0b0000100000011001;
+int test;
 
 
 
@@ -4531,19 +4532,25 @@ void TMR0_Initialize(void)
 
 
 
-OPTION_REG = (OPTION_REG & 0xC0) | 0xD1 & 0x3F;
+OPTION_REGbits.nWPUEN = 1;
+OPTION_REGbits.INTEDG = 1;
+OPTION_REGbits.TMR0CS = 0;
+OPTION_REGbits.TMR0SE = 0;
+OPTION_REGbits.PSA = 0;
+OPTION_REGbits.PS = 0;
 
 
-TMR0 = 0xFB;
+TMR0 = 247;
 
 
-timer0ReloadVal= 251;
+timer0ReloadVal= 108;
 
 
 INTCONbits.TMR0IF = 0;
 
 
 INTCONbits.TMR0IE = 1;
+INTCONbits.TMR0IE == 1;
 
 }
 
@@ -4551,6 +4558,7 @@ void OSCILLATOR_Initialize(void)
 {
 
 OSCCON = 0x30;
+OSCCONbits.IRCF = 0xD;
 
 OSCTUNE = 0x00;
 
@@ -4566,24 +4574,24 @@ WDTCON = 0x16;
 void PIN_MANAGER_Initialize(void)
 {
 
-# 85
+# 93
 LATA = 0x00;
 
-# 90
+# 98
 TRISAbits.TRISA4 = 0;
 PORTAbits.RA4 = 0;
 
 TRISAbits.TRISA2 = 0;
 PORTAbits.RA2 = 0;
 
-# 99
+# 107
 ANSELA = 0x00;
 
-# 104
+# 112
 WPUA = 0x3F;
 OPTION_REGbits.nWPUEN = 0;
 
-# 111
+# 119
 APFCON = 0x00;
 
 
@@ -4628,32 +4636,45 @@ while (1)
 {
 if (flag.Tim320u)
 {
+
 if (number == 0)
 {
 PORTAbits.RA4 = 1;
 process = code;
+test = 0;
 }
 else
 {
 if (number <= 36)
 {
-if ((number % 3) == 1) PORTAbits.RA4 = 0;
 
-if ((number % 3) == 0) PORTAbits.RA4 = 1;
 
-if ((number % 3) == 2)
+if (test == 0) PORTAbits.RA4 = 0;
+if (test == 1)
 {
 if (process & 1) PORTAbits.RA4 = 1;
 else PORTAbits.RA4 = 0;
 process = process >> 1;
-
 }
+if (test == 2) PORTAbits.RA4 = 1;
+test++;
+if (test == 3) test = 0;
+
+# 200
 }
 else PORTAbits.RA4 = 0;
 }
 
+flag.Tim320u = 0;
+
 number++;
-if (number > 1000) number = 0;
+
+if (number > 1000)
+{
+number = 0;
+}
+
+
 }
 
 }

@@ -7,21 +7,19 @@
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"6 /opt/microchip/xc8/v1.41/sources/common/lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-"43 /home/pierre/MPLABXProjects/T433.X/main.c
+"44 /home/pierre/MPLABXProjects/T433.X/main.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
-"64
+"71
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"74
+"82
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"80
+"88
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"118
+"126
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"136
+"144
 [v _main main `(v  1 e 1 0 ]
-[s S30 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S61 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -31,14 +29,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "358 /opt/microchip/xc8/v1.41/include/pic12f1572.h
-[s S39 . 1 `uc 1 . 1 0 :2:0 
+[s S70 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S44 . 1 `S30 1 . 1 0 `S39 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES44  1 e 1 @11 ]
-[s S88 . 1 `uc 1 RA0 1 0 :1:0 
+[u S75 . 1 `S61 1 . 1 0 `S70 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES75  1 e 1 @11 ]
+[s S149 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -46,13 +44,13 @@
 `uc 1 RA5 1 0 :1:5 
 ]
 "430
-[s S95 . 1 `uc 1 PORTA 1 0 :6:0 
+[s S156 . 1 `uc 1 PORTA 1 0 :6:0 
 ]
-[u S97 . 1 `S88 1 . 1 0 `S95 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES97  1 e 1 @12 ]
+[u S158 . 1 `S149 1 . 1 0 `S156 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES158  1 e 1 @12 ]
 "571
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
-[s S66 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S127 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -60,13 +58,11 @@
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "902
-[s S73 . 1 `uc 1 TRISA 1 0 :6:0 
+[s S134 . 1 `uc 1 TRISA 1 0 :6:0 
 ]
-[u S75 . 1 `S66 1 . 1 0 `S73 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES75  1 e 1 @140 ]
-"1043
-[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
-[s S112 . 1 `uc 1 PS0 1 0 :1:0 
+[u S136 . 1 `S127 1 . 1 0 `S134 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES136  1 e 1 @140 ]
+[s S28 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -76,19 +72,35 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1066
-[s S121 . 1 `uc 1 PS 1 0 :3:0 
+[s S37 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S126 . 1 `S112 1 . 1 0 `S121 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES126  1 e 1 @149 ]
+[u S42 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES42  1 e 1 @149 ]
 "1181
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1239
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
 "1296
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+[s S94 . 1 `uc 1 SCS0 1 0 :1:0 
+`uc 1 SCS1 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF0 1 0 :1:3 
+`uc 1 IRCF1 1 0 :1:4 
+`uc 1 IRCF2 1 0 :1:5 
+`uc 1 IRCF3 1 0 :1:6 
+`uc 1 SPLLEN 1 0 :1:7 
+]
+"1318
+[s S103 . 1 `uc 1 SCS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 IRCF 1 0 :4:3 
+]
+[u S107 . 1 `S94 1 . 1 0 `S103 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES107  1 e 1 @153 ]
 "1666
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2076
@@ -115,43 +127,35 @@
 [v _process process `ui  1 e 2 0 ]
 "39
 [v _code code `DCCui  1 e 2 0 ]
-"136
+"40
+[v _test test `i  1 e 2 0 ]
+"144
 [v _main main `(v  1 e 1 0 ]
 {
-"184
+"217
 } 0
-"6 /opt/microchip/xc8/v1.41/sources/common/lwmod.c
-[v ___lwmod __lwmod `(ui  1 e 2 0 ]
-{
-"11
-[v ___lwmod@counter counter `uc  1 a 1 6 ]
-"6
-[v ___lwmod@divisor divisor `ui  1 p 2 1 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 3 ]
-"26
-} 0
-"74 /home/pierre/MPLABXProjects/T433.X/main.c
+"82
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"78
+"86
 } 0
-"43
+"44
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
-"62
+"69
 } 0
-"80
+"88
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"116
+"124
 } 0
-"64
+"71
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"72
+"80
 } 0
-"118
+"126
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"133
+"141
 } 0
