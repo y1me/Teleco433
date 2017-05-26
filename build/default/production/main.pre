@@ -4581,7 +4581,7 @@ LATA = 0x00;
 TRISAbits.TRISA4 = 0;
 PORTAbits.RA4 = 0;
 
-TRISAbits.TRISA2 = 0;
+TRISAbits.TRISA2 = 1;
 PORTAbits.RA2 = 0;
 
 # 107
@@ -4669,7 +4669,7 @@ flag.Tim320u = 0;
 
 number++;
 
-if (number > 1000)
+if (number > 120)
 {
 number = 0;
 }

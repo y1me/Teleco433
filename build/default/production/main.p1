@@ -3581,9 +3581,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 99: PORTAbits.RA4 = 0;
 "99
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 101: TRISAbits.TRISA2 = 0;
+[; ;main.c: 101: TRISAbits.TRISA2 = 1;
 "101
-[e = . . _TRISAbits 0 2 -> -> 0 `i `uc ]
+[e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
 [; ;main.c: 102: PORTAbits.RA2 = 0;
 "102
 [e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
@@ -3783,9 +3783,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 206: number++;
 "206
 [e ++ _number -> -> 1 `i `ui ]
-[; ;main.c: 208: if (number > 1000)
+[; ;main.c: 208: if (number > 120)
 "208
-[e $ ! > _number -> -> 1000 `i `ui 457  ]
+[e $ ! > _number -> -> 120 `i `ui 457  ]
 [; ;main.c: 209: {
 "209
 {

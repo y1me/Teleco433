@@ -19,7 +19,7 @@
 
 #define OUT         PORTAbits.RA4
 #define CODELENGTH  36
-#define REPEAT      1000
+#define REPEAT      120
 
 volatile struct chbits{
 						unsigned Tim320u:1; 
@@ -98,7 +98,7 @@ void PIN_MANAGER_Initialize(void)
     TRISAbits.TRISA4 = 0;
     PORTAbits.RA4 = 0;
     //portest
-    TRISAbits.TRISA2 = 0;
+    TRISAbits.TRISA2 = 1;
     PORTAbits.RA2 = 0;
     
     /**

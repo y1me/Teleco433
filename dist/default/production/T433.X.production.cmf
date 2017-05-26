@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXPEUTPd.obj
+$/tmp/xcXwU0Cs6.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 1E 1E 1 2
 config CONFIG 0 8007 8007 2 2
@@ -99,19 +99,19 @@ STRING BD-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/T433.X.production.obj
-1F cinit CODE >454:/tmp/xcXv24faJ
-1F cinit CODE >457:/tmp/xcXv24faJ
-1F cinit CODE >478:/tmp/xcXv24faJ
-20 cinit CODE >479:/tmp/xcXv24faJ
-21 cinit CODE >480:/tmp/xcXv24faJ
-22 cinit CODE >481:/tmp/xcXv24faJ
-23 cinit CODE >482:/tmp/xcXv24faJ
-24 cinit CODE >483:/tmp/xcXv24faJ
-25 cinit CODE >484:/tmp/xcXv24faJ
-26 cinit CODE >490:/tmp/xcXv24faJ
-26 cinit CODE >492:/tmp/xcXv24faJ
-27 cinit CODE >493:/tmp/xcXv24faJ
-28 cinit CODE >494:/tmp/xcXv24faJ
+1F cinit CODE >454:/tmp/xcXKpeSF2
+1F cinit CODE >457:/tmp/xcXKpeSF2
+1F cinit CODE >478:/tmp/xcXKpeSF2
+20 cinit CODE >479:/tmp/xcXKpeSF2
+21 cinit CODE >480:/tmp/xcXKpeSF2
+22 cinit CODE >481:/tmp/xcXKpeSF2
+23 cinit CODE >482:/tmp/xcXKpeSF2
+24 cinit CODE >483:/tmp/xcXKpeSF2
+25 cinit CODE >484:/tmp/xcXKpeSF2
+26 cinit CODE >490:/tmp/xcXKpeSF2
+26 cinit CODE >492:/tmp/xcXKpeSF2
+27 cinit CODE >493:/tmp/xcXKpeSF2
+28 cinit CODE >494:/tmp/xcXKpeSF2
 4 intentry CODE >126:/home/pierre/MPLABXProjects/T433.X/main.c
 9 intentry CODE >129:/home/pierre/MPLABXProjects/T433.X/main.c
 C intentry CODE >131:/home/pierre/MPLABXProjects/T433.X/main.c
@@ -206,24 +206,24 @@ __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production/T433.X.production.obj
 _TMR0 15 0 ABS 0 - dist/default/production/T433.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production/T433.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXPEUTPd.obj
+___sp 0 0 STACK 2 stack /tmp/xcXwU0Cs6.obj
 _code 176 0 STRCODE 0 stringtext dist/default/production/T433.X.production.obj
 _flag 76 0 COMMON 1 bssCOMMON dist/default/production/T433.X.production.obj
 _main 52 0 CODE 0 maintext dist/default/production/T433.X.production.obj
 _test 70 0 COMMON 1 bssCOMMON dist/default/production/T433.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/T433.X.production.obj
-start 3C 0 CODE 0 init /tmp/xcXPEUTPd.obj
+start 3C 0 CODE 0 init /tmp/xcXwU0Cs6.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/T433.X.production.obj
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production/T433.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
 __LnvCOMMON 0 0 ABS 0 nvCOMMON -
-intlevel0 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcXPEUTPd.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcXwU0Cs6.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 99 0 ABS 0 - dist/default/production/T433.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/T433.X.production.obj
@@ -239,7 +239,7 @@ start_initialization 3E 0 CODE 0 cinit dist/default/production/T433.X.production
 _OSCCON 99 0 ABS 0 - dist/default/production/T433.X.production.obj
 _TRISAbits 8C 0 ABS 0 - dist/default/production/T433.X.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production/T433.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXPEUTPd.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXwU0Cs6.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -378,7 +378,7 @@ __S2 0 0 ABS 0 - -
 __pnvCOMMON 7B 0 COMMON 1 nvCOMMON dist/default/production/T433.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/T433.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXPEUTPd.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXwU0Cs6.obj
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production/T433.X.production.obj
 __end_of_PIN_MANAGER_Initialize 136 0 CODE 0 text3 dist/default/production/T433.X.production.obj
 _number 74 0 COMMON 1 bssCOMMON dist/default/production/T433.X.production.obj
@@ -412,8 +412,8 @@ __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/T433.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/T433.X.production.obj
-stackhi 20EF 0 ABS 0 - /tmp/xcXPEUTPd.obj
-stacklo 2000 0 ABS 0 - /tmp/xcXPEUTPd.obj
+stackhi 20EF 0 ABS 0 - /tmp/xcXwU0Cs6.obj
+stacklo 2000 0 ABS 0 - /tmp/xcXwU0Cs6.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production/T433.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
